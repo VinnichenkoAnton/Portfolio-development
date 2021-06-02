@@ -1,0 +1,63 @@
+.usage {
+    &__technol {
+        padding: 60px 0 120px 0;
+        display: grid;
+        grid-template: repeat(2, minmax(270px, auto)) / repeat(4, minmax(270px, auto));
+        grid-auto-rows: minmax(270px, auto);
+        gap: 13px 13px;
+        &-item {
+            border: 1px solid #000000;
+            padding: 30px;
+        }
+    }
+    &__name {
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__text {
+        margin-top: 15px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__knowledge {
+        display: grid;
+        grid-template: repeat(2, minmax(70px, auto)) / repeat(3, minmax(350px, auto));
+        grid-auto-rows: minmax(70px, auto);
+        gap: 30px 45px;
+        &-item {
+            position: relative;
+        }
+    }
+    &__feature {
+        position: relative;
+        padding-left: 13px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        @include before_circle;
+        &:before {
+            top: -45%;
+        }
+    }
+    &__percent {
+        position: absolute;
+        top: -2px;
+        right: 0;
+    }
+    &__scale {
+        margin-top: 27px;
+        position: relative;
+        width: 350px;
+        height: 14px;
+        background: #E8E4DE;
+        border-radius: 4px;
+        transition: all 2s;
+        &_yellow {
+            height: 100%;
+            background: $main-color;
+            border-radius: 4px;
+        }
+    }
+}
